@@ -16,6 +16,10 @@ source venv/bin/activate<br />
 pip3 install -r requirements.txt<br />
 hug -f app.py<br />
 
+## Testes
+
+pytest tests.py
+
 
 ## Exemplo de retorno da api
 ###### Quando todas as urls possuírem um padrão válido será retornado uma resposta como essa
