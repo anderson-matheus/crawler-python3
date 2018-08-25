@@ -12,7 +12,7 @@ class Crawler:
 		try:
 			r = http.request('GET', url)
 			string_html = r.data.decode('utf-8') # transform r.data in string
-			results = re.findall('(para)', string_html, re.IGNORECASE)
+			results = re.findall('('+ word +')', string_html, re.IGNORECASE)
 			return {'url': url, 'searched_word': word, 'occurrence': len(results), 'success': True}
 		except HTTPError as e:
 			return {'url': url, 'searched_word': word, 'occurrence': 0, 'success': False}
