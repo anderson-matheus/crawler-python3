@@ -10,7 +10,8 @@ def test_valid_urls():
 		'http://localhost'
 		'uol.com.br',
 	]
-	assert Validate.is_valid_urls(urls) == True
+	validate = Validate()
+	assert validate.is_valid_urls(urls) == True
 
 def test_invalid_urls():
 	urls = [
@@ -18,14 +19,17 @@ def test_invalid_urls():
 		'invalid test'
 		'http://testurl'
 	]
-	assert Validate.is_valid_urls(urls) == False
+	validate = Validate()
+	assert validate.is_valid_urls(urls) == False
 
 def test_crawler_valid_url():
-	result = Crawler.find_word_url('uol.com.br', 'assine')
+	crawler = Crawler()
+	result = crawler.find_word_url('uol.com.br', 'assine')
 	assert result['success'] == True
 
 def test_crawler_invalid_url():
-	result = Crawler.find_word_url('invalidurl', 'assine')
+	crawler = Crawler()
+	result = crawler.find_word_url('invalidurl', 'assine')
 	assert result['success'] == False
 
 

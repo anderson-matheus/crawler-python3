@@ -3,7 +3,7 @@ import re
 
 class Validate:
 
-    def is_valid_urls(urls):
+    def is_valid_urls(self, urls):
         for url in urls:
             validate = re.compile(
             	r'(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?'  # http:// or https://

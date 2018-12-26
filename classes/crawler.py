@@ -7,7 +7,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 class Crawler:
 
-	def find_word_url(url, word):
+	def find_word_url(self, url, word):
 		http = urllib3.PoolManager()
 		try:
 			r = http.request('GET', url)
